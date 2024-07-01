@@ -1,0 +1,8 @@
+research note 1-7-2024 :
+change model precision not effected speed and gpu vram
+
+50 image 512pixel 2 minute 4.5 gb on t4 gpu google colab 2 batchsize lr 1e-4 adam weight decay 1e-2, hf text2image training mp fp16 from fp16 pruned model resulted in 250 step
+50 image 512pixel 2 minute 4.5 gb on t4 gpu google colab 2 batchsize lr 1e-4 adam weight decay 1e-2, hf text2image training mp fp16 from fp32 pruned model resulted in 250 step
+50 image 512pixel 8 minute 7.7 gb on t4 gpu google colab 2 batchsize lr 1e-4 adam weight decay 1e-2, hf text2image training mp no using xformers from fp16 pruned model resulted in 250 step (deduction logic)
+50 image 512pixel 8 minute 7.7 gb on t4 gpu google colab 2 batchsize lr 1e-4 adam weight decay 1e-2, hf text2image training mp no using xformers from fp32 pruned model resulted in 250 step
+
